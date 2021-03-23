@@ -23,7 +23,7 @@ var lxdh string
 
 var username = flag.String("username", "", "学号")
 var password = flag.String("password", "", "portal密码")
-var reason = flag.String("reason", "吃饭", "出入校事由")
+var reason = flag.String("reason", "", "出入校事由")
 var track = flag.String("track", "南门-砂锅粥-南门", "出校行动轨迹")
 var ftKey string
 
@@ -47,6 +47,9 @@ func initFlags() {
 	}
 	if *password == "" {
 		*password = os.Getenv("PASSWORD")
+	}
+	if *reason == "" {
+		*reason = os.Getenv("REASON")
 	}
 	if *username == "" || *password == "" {
 		panic("Must specify username and password")
