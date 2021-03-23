@@ -32,4 +32,5 @@ jobs:
         USERNAME: ${{ secrets.USERNAME2 }}
         PASSWORD: ${{ secrets.PASSWORD2 }}
         FT_SCKEY: ${{ secrets.FT_SCKEY }}
+        REASON: ${{ secrets.REASON2 }}
       run: ./autosubmit
